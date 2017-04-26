@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Productos</h1>
+  <div class="row">
+    <% @productos.each do |producto| %>
+      <div class="col s12 m4">
+        <div class="producto card">
+          <div class="producto-body card-content">
+            <span class="card-title"><%= producto.title %></span>
+            <p class="content description"><%=h truncate(producto.content, :length => 80) %></p>
+            <span class="time">Cantidad: <%= producto.cantidad %></span>
+            <p class="time">Fecha: <%= producto.created_at %></p>
+          </div>
+          <div class="card-action">
+            <%= link_to 'Ver producto', producto_path(producto) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
