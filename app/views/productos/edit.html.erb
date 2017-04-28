@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Editar</h1>
+  <%= form_for(@producto) do |f| %>
+    <%= render 'shared/error_messages', object: @producto %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+
+    <%= f.label :cantidad %>
+    <%= f.text_field :cantidad, class: 'form-control' %>
+
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'form-control' %>
+
+    <%= f.submit "Guardar", class: "btn btn-primary" %>
+  <% end %>
+</div>

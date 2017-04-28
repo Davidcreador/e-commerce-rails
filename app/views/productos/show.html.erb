@@ -4,5 +4,6 @@
     <strong>Descripción:</strong>
     <%= @producto.content %>
   </p>
-  <a href="">Agregar al carrito</a>
+  <%= link_to 'Agregar al carrito', "", class: "btn btn-primary" %>
+  <%= link_to 'Editar', edit_producto_path(@producto), class: "btn btn-primary" %>
 </div>
